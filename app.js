@@ -1,4 +1,4 @@
-const message = document.querySelector("p");
+const message = document.querySelector("#message");
 const input = document.querySelector("input");
 
 const eventHandler = () => {
@@ -6,7 +6,7 @@ const eventHandler = () => {
   const hash = CryptoJS.SHA256(inputText.toLowerCase()).toString(CryptoJS.enc.Hex);
 
   if (hash === "32a0668ee4e8f835840957970258226c07029e3b48fe812fd2d5a0c4e54ad27c") {
-    message.innerText = "Congratulations! This is the name.";
+    message.innerText = "Congratulations! You guessed the name.";
   } else {
     message.innerText = "This is not the name.";
     input.value = "";
